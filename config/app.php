@@ -134,6 +134,10 @@ return [
     |
     */
 
+    'PASSWORD_CLIENT_ID' => env('PASSWORD_CLIENT_ID'),
+    'PASSWORD_CLIENT_SECRET' => env('PASSWORD_CLIENT_SECRET'),
+    'APP_IP_URL' => env('APP_IP_URL'),
+
     'providers' => [
 
         /*

@@ -11,7 +11,6 @@ class LoginController extends Controller
 {
     public function login(Request $request)
     {
-        \Log::info(1);
         $input = $this->validate($request, [
             'email' => 'required|email|exists:users,email',
             'password' => 'required|min:6',
@@ -19,13 +18,16 @@ class LoginController extends Controller
             'email.exists' => 'The user credentials were incorrect.',
         ]);
 
-        request()->request->add([
+
+        $data = [
             'grant_type' => 'password',
-            'client_id' => env('PASSWORD_CLIENT_ID'),
-            'client_secret' => env('PASSWORD_CLIENT_SECRET'),
+            'client_id' => \Config::get('app.PASSWORD_CLIENT_ID'),
+            'client_secret' => \Config::get('app.PASSWORD_CLIENT_SECRET'),
             'username' => $input['email'],
             'password' => $input['password'],
-        ]);
+        ];
+
+        request()->request->add($data);
 
         $response = Route::dispatch(Request::create('/oauth/token', 'POST'));
 

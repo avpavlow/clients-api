@@ -7,6 +7,7 @@ use App\User;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
 use GuzzleHttp\Client;
+use Faker\Generator as Faker;
 
 class RegisterController extends Controller
 {
@@ -26,11 +27,11 @@ class RegisterController extends Controller
 
             $http = new Client;
 
-            $response = $http->post( ENV('APP_IP_URL') . ':3000/oauth/token', [
+            $response = $http->post( \Config::get('app.APP_IP_URL') . '/oauth/token', [
                 'form_params' => [
                     'grant_type' => 'password',
-                    'client_id' => env('PASSWORD_CLIENT_ID'),
-                    'client_secret' => env('PASSWORD_CLIENT_SECRET'),
+                    'client_id' => \Config::get('app.PASSWORD_CLIENT_ID'),
+                    'client_secret' => \Config::get('app.PASSWORD_CLIENT_SECRET'),
                     'username' => $request->get('email'),
                     'password' => $request->get('password'),
                     'remember' => false,
