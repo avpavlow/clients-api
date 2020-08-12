@@ -8,12 +8,11 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use App\Http\Controllers\Controller;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
-use Illuminate\Support\Facades\Log;
 
 class ClientController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Показать список
      *
      * @param Request $request
      * @return LengthAwarePaginator|mixed
@@ -32,13 +31,17 @@ class ClientController extends Controller
      */
     public function store(ClientRequest $request)
     {
+        $validated = $request->validated();
+        \Log::info('validated');
+        \Log::info($validated);
         $client = Client::create($request->validated());
 
+        \Log::info($client);
         return response()->json($client, 201);
     }
 
     /**
-     * Display the specified resource.
+     * Показать
      *
      * @param \Illuminate\Http\Request $request
      * @param int $id
