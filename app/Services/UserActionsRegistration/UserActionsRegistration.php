@@ -1,10 +1,13 @@
 <?php
-use \App\services\UserActionsRegistration\IUserActionsRegistration;
+
+namespace App\Services\UserActionsRegistration;
+
 
 /**
  * Сервис "Реализация регистрации действий пользователя"
  */
-class UserActionsRegistration implements IUserActionsRegistration{
+class UserActionsRegistration implements IUserActionsRegistration
+{
     /**
      * Регистрация
      * @param array $data Данные для регистрации

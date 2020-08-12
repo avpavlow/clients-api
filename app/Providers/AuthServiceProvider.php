@@ -2,10 +2,14 @@
 
 namespace App\Providers;
 
+use App\Services\Auth\Authenticator;
+use App\Services\Auth\DefaultAuthenticator;
 use Carbon\Carbon;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Gate;
 use Laravel\Passport\Passport;
+use App\Services\Authorization\IAuthToken;
+use App\Services\Authorization\AuthToken;
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -17,6 +21,18 @@ class AuthServiceProvider extends ServiceProvider
     protected $policies = [
         // 'App\Model' => 'App\Policies\ModelPolicy',
     ];
+
+
+    /**
+     * Register any application services.
+     *
+     * @return void
+     */
+    public function register()
+    {
+        //Сервис получения токена
+        $this->app->singleton(IAuthToken::class, AuthToken::class);
+    }
 
     /**
      * Register any authentication / authorization services.

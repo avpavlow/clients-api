@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\services\UserActionsRegistration;
+namespace App\Services\UserActionsRegistration;
 
 /**
  * Интерфейс регистрации действий пользователя
