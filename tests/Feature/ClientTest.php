@@ -66,14 +66,13 @@ class ClientTest extends TestCase
     /**
      * Тестируем обновление
      */
-        public function test_update_client()
-        {
-            $headers = ['Authorization' => "Bearer $this->token"];
-            $new = factory(Client::class)->create();
+    public function test_update_client()
+    {
+        $headers = ['Authorization' => "Bearer $this->token"];
+        $new = factory(Client::class)->create();
 
 
-
-            $this->json('DELETE', 'api/clients/' . $new->id, [], $headers)
-                ->assertStatus(200);
-        }
+        $this->json('DELETE', 'api/clients/' . $new->id, [], $headers)
+            ->assertStatus(200);
+    }
 }

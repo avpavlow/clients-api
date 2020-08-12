@@ -21,9 +21,21 @@ class Client extends Authenticatable
         'surname',
         'phone',
         'email',
-        'user_id'
     ];
 
+
+
+    /**
+     * The attributes that should be cast to native types.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'user_id' => 'string',
+        'surname' => 'integer',
+        'phone' => 'integer',
+        'email' => 'integer',
+    ];
 
     /**
      * Load all  and paginate
