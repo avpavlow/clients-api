@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f6f9f3e4-d9ff-4fc4-a313-60487a4c2b66" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/UserAction.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Client.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Client.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/ClientTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ClientTest.php" afterDir="false" />
-    </list>
+    <list default="true" id="f6f9f3e4-d9ff-4fc4-a313-60487a4c2b66" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -177,7 +172,7 @@
       <option name="presentableId" value="Default" />
       <updated>1597204601881</updated>
       <workItem from="1597204602959" duration="487000" />
-      <workItem from="1597205091273" duration="26717000" />
+      <workItem from="1597205091273" duration="27018000" />
     </task>
     <task id="LOCAL-00001" summary="Описание">
       <created>1597205106343</created>
@@ -277,7 +272,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597238155027</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Добавлен экшен и модель">
+      <created>1597239680614</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1597239680614</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -297,7 +299,8 @@
     <MESSAGE value="Сделан тест для получения общего списка клиентов" />
     <MESSAGE value="Тесты на создание и удаление" />
     <MESSAGE value="Написаны тесты на создание, обновление, получение, удаление" />
-    <option name="LAST_COMMIT_MESSAGE" value="Написаны тесты на создание, обновление, получение, удаление" />
+    <MESSAGE value="Добавлен экшен и модель" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлен экшен и модель" />
   </component>
   <component name="WindowStateProjectService">
     <state x="726" y="142" width="450" height="760" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1597209408244">
@@ -308,10 +311,10 @@
       <screen x="0" y="0" width="1920" height="1054" />
     </state>
     <state x="690" y="283" width="528" height="481" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1054@0.0.1920.1054" timestamp="1597227808569" />
-    <state x="512" y="86" width="883" height="876" key="CommitChangelistDialog2" timestamp="1597238154965">
+    <state x="512" y="86" width="883" height="876" key="CommitChangelistDialog2" timestamp="1597239680560">
       <screen x="0" y="0" width="1920" height="1054" />
     </state>
-    <state x="512" y="86" width="883" height="876" key="CommitChangelistDialog2/0.0.1920.1054@0.0.1920.1054" timestamp="1597238154965" />
+    <state x="512" y="86" width="883" height="876" key="CommitChangelistDialog2/0.0.1920.1054@0.0.1920.1054" timestamp="1597239680560" />
     <state x="740" y="283" width="428" height="481" key="FileChooserDialogImpl" timestamp="1597220803018">
       <screen x="0" y="0" width="1920" height="1054" />
     </state>
