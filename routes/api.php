@@ -13,9 +13,9 @@ Route::group(['middleware' => 'auth:api'], function () {
         return $request->user();
     });
 
-    Route::post('/', 'ClientController@store')->name('clients.store');
-    Route::get('/', 'ClientController@index')->name('clients.index');
-    Route::get('/{id}', 'ClientController@show')->name('clients.show');
-    Route::match(['put', 'patch'], '/{id}', 'ClientController@update')->name('clients.update');
-    Route::delete('/{id}', 'ClientController@delete')->name('clients.delete');
+    Route::post('clients', 'Api\ClientController@store')->name('clients.store');
+    Route::get('clients', 'Api\ClientController@index')->name('clients.index');
+    Route::get('clients/{id}', 'Api\ClientController@show')->name('clients.show');
+    Route::match(['put', 'patch'], 'clients/{id}', 'Api\ClientController@update')->name('clients.update');
+    Route::delete('clients/{id}', 'Api\ClientController@delete')->name('clients.delete');
 });

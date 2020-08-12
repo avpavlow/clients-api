@@ -6,29 +6,28 @@ use App\User;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
-class LoginTest extends TestCase
+class ClientTest extends TestCase
 {
+    private $email = 'user@mail.ru';
+    private $password = 'secret';
+
+
     //В тестах используем транзакции
     use DatabaseTransactions;
 
-    /**
-     * A basic test example.
-     *
-     * @return void
-     */
-    public function test_user_can_login()
+    public function setUp(): void
     {
-        $user = factory(User::class)->create();
+        parent::setUp();
 
-        $response = $this->post('/api/login', [
-            'email' => $user->email,
+        //Авторизация
+        $response = $this->post('api/login', [
+            'email' => 'user@mail.ru',
             'password' => 'secret',
         ]);
 
         //Получили токен
-        $token = json_encode($response->baseResponse->original['access_token']);
-
-        $response->assertStatus(200);
+       // $this->token  = json_encode($response->baseResponse->original['access_token']);
+        $this->token = $response->getData()->access_token;
     }
 
 
@@ -37,15 +36,14 @@ class LoginTest extends TestCase
      *
      * @return void
      */
-   /* public function test_user_can_register()
+    public function test_user_can_login()
     {
-        $response = $this->post('/api/register', [
-            'email' => 'test1@mail.ru',
-            'name' => 'name1',
-            'password' => 'secret',
-            'password_confirmation' => 'secret'
-        ]);
+        $headers = ['Authorization' => "Bearer $this->token"];
 
+        $response = $this->json('GET', 'api/clients', [], $headers);
+        //Получили токен
         $response->assertStatus(200);
-    }*/
+    }
+
+
 }

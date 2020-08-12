@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6f9f3e4-d9ff-4fc4-a313-60487a4c2b66" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tests/Feature/ClientTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ClientController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/ClientController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/ClientTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ClientTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,6 +149,9 @@
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Http/Controllers/Api" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/tests/Feature" />
       <recent name="$PROJECT_DIR$/app/Http/Requests" />
@@ -172,7 +175,7 @@
       <option name="presentableId" value="Default" />
       <updated>1597204601881</updated>
       <workItem from="1597204602959" duration="487000" />
-      <workItem from="1597205091273" duration="20028000" />
+      <workItem from="1597205091273" duration="21155000" />
     </task>
     <task id="LOCAL-00001" summary="Описание">
       <created>1597205106343</created>
@@ -244,14 +247,20 @@
       <option name="project" value="LOCAL" />
       <updated>1597229930706</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Описание">
+      <created>1597230509792</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1597230509792</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Описание" />
     <MESSAGE value="Добавлены файлы для Oauth-авторизации с сервером предоставленным модулем &quot;laravel/passport&quot;" />
     <MESSAGE value="Настройка и доработка авторизации" />
     <MESSAGE value="Добавлен Seeder" />
@@ -261,7 +270,8 @@
     <MESSAGE value="Добавлена миграция для хранения клиентов" />
     <MESSAGE value="Добавлены валидаторы" />
     <MESSAGE value="Добавлены контроллеры, роуты" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлены контроллеры, роуты" />
+    <MESSAGE value="Описание" />
+    <option name="LAST_COMMIT_MESSAGE" value="Описание" />
   </component>
   <component name="WindowStateProjectService">
     <state x="726" y="142" width="450" height="760" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1597209408244">
@@ -272,10 +282,10 @@
       <screen x="0" y="0" width="1920" height="1054" />
     </state>
     <state x="690" y="283" width="528" height="481" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1054@0.0.1920.1054" timestamp="1597227808569" />
-    <state x="512" y="86" width="883" height="876" key="CommitChangelistDialog2" timestamp="1597229930596">
+    <state x="512" y="86" width="883" height="876" key="CommitChangelistDialog2" timestamp="1597230509733">
       <screen x="0" y="0" width="1920" height="1054" />
     </state>
-    <state x="512" y="86" width="883" height="876" key="CommitChangelistDialog2/0.0.1920.1054@0.0.1920.1054" timestamp="1597229930596" />
+    <state x="512" y="86" width="883" height="876" key="CommitChangelistDialog2/0.0.1920.1054@0.0.1920.1054" timestamp="1597230509733" />
     <state x="740" y="283" width="428" height="481" key="FileChooserDialogImpl" timestamp="1597220803018">
       <screen x="0" y="0" width="1920" height="1054" />
     </state>
@@ -288,10 +298,10 @@
       <screen x="0" y="0" width="1920" height="1054" />
     </state>
     <state x="446" y="160" key="SettingsEditor/0.0.1920.1054@0.0.1920.1054" timestamp="1597221213623" />
-    <state x="552" y="261" width="804" height="525" key="Vcs.Push.Dialog.v2" timestamp="1597229935215">
+    <state x="552" y="261" width="804" height="525" key="Vcs.Push.Dialog.v2" timestamp="1597230518310">
       <screen x="0" y="0" width="1920" height="1054" />
     </state>
-    <state x="552" y="261" width="804" height="525" key="Vcs.Push.Dialog.v2/0.0.1920.1054@0.0.1920.1054" timestamp="1597229935215" />
+    <state x="552" y="261" width="804" height="525" key="Vcs.Push.Dialog.v2/0.0.1920.1054@0.0.1920.1054" timestamp="1597230518310" />
     <state x="649" y="269" width="616" height="512" key="find.popup" timestamp="1597227479658">
       <screen x="0" y="0" width="1920" height="1054" />
     </state>
