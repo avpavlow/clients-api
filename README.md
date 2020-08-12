@@ -28,3 +28,4 @@ PASSWORD_CLIENT_ID=2
 PASSWORD_CLIENT_SECRET=N05c9s7Xy2WZtBZ7jxqjmHeeTlJ2OuEFJ8wZPQNx
 ````
 Это нужно для OAuth-авторизации с помощью токенов
+4. Выполните `php artisan config:cache``
