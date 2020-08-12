@@ -18,13 +18,6 @@ class ClientTest extends TestCase
     //В тестах используем транзакции
     use DatabaseTransactions;
 
-    public function setUp(): void
-    {
-        parent::setUp();
-        $auth = $this->app->make(IAuthToken::class);
-        $this->token =  $auth->getToken($this);
-    }
-
 
     /**
      * Тестируем получение
