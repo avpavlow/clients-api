@@ -24,8 +24,8 @@ class ClientRequest extends FormRequest
     public function rules()
     {
         $rules = [
-            'name' => 'required|min:3',
-            'surname' => 'required|min:3',
+            'name' => 'required|min:1',
+            'surname' => 'required|min:1',
             'phone' => 'string',
             'email' => 'email',
         ];

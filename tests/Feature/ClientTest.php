@@ -15,10 +15,6 @@ class ClientTest extends TestCase
     private $password = 'secret';
 
 
-    //В тестах используем транзакции
-    use DatabaseTransactions;
-
-
     /**
      * Тестируем получение
      *
@@ -41,6 +37,8 @@ class ClientTest extends TestCase
     {
         $headers = ['Authorization' => "Bearer $this->token"];
         $new = factory(Client::class)->make()->toArray();
+
+        \Log::info($new);
 
         $created = $this->json('POST', 'api/clients', $new, $headers)
             ->assertStatus(201)->getData();

@@ -17,7 +17,7 @@ class AddClientTable extends Migration
             $table->increments('id');
             $table->string('name', 25);
             $table->string('surname', 25);
-            $table->string('phone',15)->nullable();
+            $table->string('phone',20)->nullable();
             $table->string('email', 40)->nullable();
             $table->unique(['name', 'surname', 'phone']);
             $table->unique(['name', 'surname', 'email']);

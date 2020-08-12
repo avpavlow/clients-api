@@ -3,6 +3,7 @@
 namespace Tests;
 
 use App\Services\Authorization\IAuthToken;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
 
 /**
@@ -11,7 +12,16 @@ use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
  */
 abstract class TestCase extends BaseTestCase
 {
+    /**
+     * @var string Используется для обращениям к API
+     */
+    protected $token;
+
+    //Для создания приложения теста
     use CreatesApplication;
+
+    //В тестах используем транзакции
+    use DatabaseTransactions;
 
     public function setUp(): void
     {
