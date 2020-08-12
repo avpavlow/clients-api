@@ -14,7 +14,7 @@ class UserAction extends Model
      */
     protected $fillable = [
         'request_method',
-        'urn',
+        'url',
         'payload',
         'user_id',
     ];

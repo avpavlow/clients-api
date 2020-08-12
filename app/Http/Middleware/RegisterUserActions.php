@@ -2,11 +2,9 @@
 
 namespace App\Http\Middleware;
 
-use App\Services\Auth\Auth;
 use App\Services\UserActionsRegistration\IUserActionsRegistration;
 use Closure;
-use Illuminate\Contracts\Foundation\Application;
-use Illuminate\Routing\Router;
+use Illuminate\Support\Facades\Auth;
 
 class RegisterUserActions
 {
@@ -27,9 +25,14 @@ class RegisterUserActions
     {
         $response = $next($request);
 
-        \Log::info($response);
+        $data = [
+            'url' => url()->full(),
+            'payload' => json_decode(request()->getContent()),
+            'method' => request()->method(),
+            'user_id' => Auth::user()->id
+        ];
 
-     //   $this->registration_action->register();
+        $this->registration_action->register($data);
 
         return $response;
     }

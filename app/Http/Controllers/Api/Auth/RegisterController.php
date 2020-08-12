@@ -7,7 +7,7 @@ use App\User;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
 use GuzzleHttp\Client;
-use Faker\Generator as Faker;
+
 
 class RegisterController extends Controller
 {

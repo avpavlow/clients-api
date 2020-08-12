@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="f6f9f3e4-d9ff-4fc4-a313-60487a4c2b66" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/Auth/RegisterController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Middleware/RegisterUserActions.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/RegisterUserActions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/UserAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/UserAction.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_12_131829_add_user_actions.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_12_131829_add_user_actions.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,7 +179,7 @@
       <updated>1597204601881</updated>
       <workItem from="1597204602959" duration="487000" />
       <workItem from="1597205091273" duration="31809000" />
-      <workItem from="1597251477110" duration="4717000" />
+      <workItem from="1597251477110" duration="6796000" />
     </task>
     <task id="LOCAL-00001" summary="Описание">
       <created>1597205106343</created>
@@ -353,7 +356,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597258390996</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Описание приложения">
+      <created>1597258869314</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1597258869314</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -383,7 +393,8 @@
     <MESSAGE value="Общий код выведен в базовый класс" />
     <MESSAGE value="По тестам поправлен код" />
     <MESSAGE value="Сервис добавлен в посредник" />
-    <option name="LAST_COMMIT_MESSAGE" value="Сервис добавлен в посредник" />
+    <MESSAGE value="Описание приложения" />
+    <option name="LAST_COMMIT_MESSAGE" value="Описание приложения" />
   </component>
   <component name="WindowStateProjectService">
     <state x="726" y="142" width="450" height="760" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1597256680464">
@@ -394,10 +405,10 @@
       <screen x="0" y="0" width="1920" height="1054" />
     </state>
     <state x="690" y="283" width="528" height="481" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1054@0.0.1920.1054" timestamp="1597258109522" />
-    <state x="512" y="86" width="883" height="876" key="CommitChangelistDialog2" timestamp="1597258390898">
+    <state x="512" y="86" width="883" height="876" key="CommitChangelistDialog2" timestamp="1597258869231">
       <screen x="0" y="0" width="1920" height="1054" />
     </state>
-    <state x="512" y="86" width="883" height="876" key="CommitChangelistDialog2/0.0.1920.1054@0.0.1920.1054" timestamp="1597258390898" />
+    <state x="512" y="86" width="883" height="876" key="CommitChangelistDialog2/0.0.1920.1054@0.0.1920.1054" timestamp="1597258869231" />
     <state x="740" y="283" width="428" height="481" key="FileChooserDialogImpl" timestamp="1597251369823">
       <screen x="0" y="0" width="1920" height="1054" />
     </state>
@@ -414,10 +425,10 @@
       <screen x="0" y="0" width="1920" height="1054" />
     </state>
     <state x="446" y="160" key="SettingsEditor/0.0.1920.1054@0.0.1920.1054" timestamp="1597221213623" />
-    <state x="552" y="261" width="804" height="525" key="Vcs.Push.Dialog.v2" timestamp="1597258395622">
+    <state x="552" y="261" width="804" height="525" key="Vcs.Push.Dialog.v2" timestamp="1597258874006">
       <screen x="0" y="0" width="1920" height="1054" />
     </state>
-    <state x="552" y="261" width="804" height="525" key="Vcs.Push.Dialog.v2/0.0.1920.1054@0.0.1920.1054" timestamp="1597258395622" />
+    <state x="552" y="261" width="804" height="525" key="Vcs.Push.Dialog.v2/0.0.1920.1054@0.0.1920.1054" timestamp="1597258874006" />
     <state x="649" y="269" width="694" height="708" key="find.popup" timestamp="1597236053615">
       <screen x="0" y="0" width="1920" height="1054" />
     </state>
