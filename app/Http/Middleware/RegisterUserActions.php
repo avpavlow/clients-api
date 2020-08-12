@@ -12,6 +12,11 @@ class RegisterUserActions
 {
     private $registration_action;
 
+    /**
+     *
+     * RegisterUserActions constructor.
+     * @param IUserActionsRegistration $registration_action Используется сервис IoC
+     */
     public function __construct(IUserActionsRegistration $registration_action)
     {
         $this->registration_action = $registration_action;
@@ -22,7 +27,9 @@ class RegisterUserActions
     {
         $response = $next($request);
 
-        // Perform action
+        \Log::info($response);
+
+     //   $this->registration_action->register();
 
         return $response;
     }
