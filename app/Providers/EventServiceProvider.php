@@ -2,7 +2,7 @@
 
 namespace App\Providers;
 
-use App\Services\Authorization\AuthToken;
+use App\Services\Authorization\TestingAuthToken;
 use App\Services\Authorization\IAuthToken;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;

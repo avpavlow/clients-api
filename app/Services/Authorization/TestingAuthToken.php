@@ -7,15 +7,17 @@ namespace App\Services\Authorization;
  * Получения токена из API
  * @package App\Services\Authorization
  */
-class AuthToken implements IAuthToken
+class TestingAuthToken implements IAuthToken
 {
-    /** Получаем токен авторизации
-     * @return string token
+    /**
+     * Получаем токен авторизации
+     * $testing_context object Контекст использования
+     * @return string
      */
-    public function getToken(): string
+    public function getToken($testing_context): string
     {
         //Авторизация
-        $response = $this->post('api/login', [
+        $response = $testing_context->post('api/login', [
             'email' => 'user@mail.ru',
             'password' => 'secret',
         ]);

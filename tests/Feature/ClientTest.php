@@ -3,6 +3,8 @@
 namespace Tests\Feature;
 
 use App\Client;
+use App\Services\Auth\Checkpoint\ActivationCheckpoint;
+use App\Services\Authorization\IAuthToken;
 use App\User;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
@@ -19,16 +21,8 @@ class ClientTest extends TestCase
     public function setUp(): void
     {
         parent::setUp();
-
-        //Авторизация
-        $response = $this->post('api/login', [
-            'email' => 'user@mail.ru',
-            'password' => 'secret',
-        ]);
-
-        //Получили токен
-        // $this->token  = json_encode($response->baseResponse->original['access_token']);
-        $this->token = $response->getData()->access_token;
+        $auth = $this->app->make(IAuthToken::class);
+        $this->token =  $auth->getToken($this);
     }
 
 

@@ -9,7 +9,7 @@ use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvid
 use Illuminate\Support\Facades\Gate;
 use Laravel\Passport\Passport;
 use App\Services\Authorization\IAuthToken;
-use App\Services\Authorization\AuthToken;
+use App\Services\Authorization\TestingAuthToken;
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -31,7 +31,7 @@ class AuthServiceProvider extends ServiceProvider
     public function register()
     {
         //Сервис получения токена
-        $this->app->singleton(IAuthToken::class, AuthToken::class);
+        $this->app->singleton(IAuthToken::class, TestingAuthToken::class);
     }
 
     /**

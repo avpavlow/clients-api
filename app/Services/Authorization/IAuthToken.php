@@ -10,9 +10,10 @@ namespace App\Services\Authorization;
 interface IAuthToken
 {
     /**
-     * Получение токена
-     * @return string token
+     * Получить токен
+     * @param $context object Контекст использования
+     * @return string
      */
-    public function getToken():string;
+    public function getToken($context):string;
 
 }

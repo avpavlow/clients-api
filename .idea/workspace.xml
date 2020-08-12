@@ -4,10 +4,8 @@
     <list default="true" id="f6f9f3e4-d9ff-4fc4-a313-60487a4c2b66" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/Authorization/AuthToken.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Authorization/AuthToken.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/Authorization/AuthToken.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Authorization/TestingAuthToken.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Services/Authorization/IAuthToken.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Authorization/IAuthToken.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/UserActionsRegistration/IUserActionsRegistration.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/UserActionsRegistration/IUserActionsRegistration.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/UserActionsRegistration/UserActionsRegistration.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/UserActionsRegistration/UserActionsRegistration.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Feature/ClientTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ClientTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -181,7 +179,7 @@
       <updated>1597204601881</updated>
       <workItem from="1597204602959" duration="487000" />
       <workItem from="1597205091273" duration="31809000" />
-      <workItem from="1597251477110" duration="2012000" />
+      <workItem from="1597251477110" duration="2805000" />
     </task>
     <task id="LOCAL-00001" summary="Описание">
       <created>1597205106343</created>
@@ -323,7 +321,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597255062263</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Зарегистрированы сервисы">
+      <created>1597256164980</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1597256164980</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -348,21 +353,22 @@
     <MESSAGE value="Добавлен посредник" />
     <MESSAGE value="Сервис" />
     <MESSAGE value="Добавлены сервисы" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлены сервисы" />
+    <MESSAGE value="Зарегистрированы сервисы" />
+    <option name="LAST_COMMIT_MESSAGE" value="Зарегистрированы сервисы" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="726" y="142" width="450" height="760" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1597254487248">
+    <state x="726" y="142" width="450" height="760" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1597256680464">
       <screen x="0" y="0" width="1920" height="1054" />
     </state>
-    <state x="726" y="142" width="450" height="760" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1054@0.0.1920.1054" timestamp="1597254487248" />
-    <state x="690" y="283" width="528" height="481" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1597255913717">
+    <state x="726" y="142" width="450" height="760" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1054@0.0.1920.1054" timestamp="1597256680464" />
+    <state x="690" y="283" width="528" height="481" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1597256436969">
       <screen x="0" y="0" width="1920" height="1054" />
     </state>
-    <state x="690" y="283" width="528" height="481" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1054@0.0.1920.1054" timestamp="1597255913717" />
-    <state x="512" y="86" width="883" height="876" key="CommitChangelistDialog2" timestamp="1597255062174">
+    <state x="690" y="283" width="528" height="481" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1054@0.0.1920.1054" timestamp="1597256436969" />
+    <state x="512" y="86" width="883" height="876" key="CommitChangelistDialog2" timestamp="1597256164867">
       <screen x="0" y="0" width="1920" height="1054" />
     </state>
-    <state x="512" y="86" width="883" height="876" key="CommitChangelistDialog2/0.0.1920.1054@0.0.1920.1054" timestamp="1597255062174" />
+    <state x="512" y="86" width="883" height="876" key="CommitChangelistDialog2/0.0.1920.1054@0.0.1920.1054" timestamp="1597256164867" />
     <state x="740" y="283" width="428" height="481" key="FileChooserDialogImpl" timestamp="1597251369823">
       <screen x="0" y="0" width="1920" height="1054" />
     </state>
@@ -379,10 +385,10 @@
       <screen x="0" y="0" width="1920" height="1054" />
     </state>
     <state x="446" y="160" key="SettingsEditor/0.0.1920.1054@0.0.1920.1054" timestamp="1597221213623" />
-    <state x="552" y="261" width="804" height="525" key="Vcs.Push.Dialog.v2" timestamp="1597255067011">
+    <state x="552" y="261" width="804" height="525" key="Vcs.Push.Dialog.v2" timestamp="1597256169662">
       <screen x="0" y="0" width="1920" height="1054" />
     </state>
-    <state x="552" y="261" width="804" height="525" key="Vcs.Push.Dialog.v2/0.0.1920.1054@0.0.1920.1054" timestamp="1597255067011" />
+    <state x="552" y="261" width="804" height="525" key="Vcs.Push.Dialog.v2/0.0.1920.1054@0.0.1920.1054" timestamp="1597256169662" />
     <state x="649" y="269" width="694" height="708" key="find.popup" timestamp="1597236053615">
       <screen x="0" y="0" width="1920" height="1054" />
     </state>
