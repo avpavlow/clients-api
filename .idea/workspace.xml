@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6f9f3e4-d9ff-4fc4-a313-60487a4c2b66" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/RegisterUserActions.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/ClientsSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Client.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Client.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/UserAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/UserAction.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/RegisterUserActions.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/RegisterUserActions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/ClientFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/ClientFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/ClientTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ClientTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +149,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Middleware" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/database/seeds" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
   </component>
@@ -154,11 +159,11 @@
       <recent name="$PROJECT_DIR$/app/Http/Controllers/Api" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/database/seeds" />
       <recent name="$PROJECT_DIR$/app/Http/Middleware" />
       <recent name="$PROJECT_DIR$/app/Http" />
       <recent name="$PROJECT_DIR$/database/factories" />
       <recent name="$PROJECT_DIR$/tests/Feature" />
-      <recent name="$PROJECT_DIR$/app/Http/Requests" />
     </key>
   </component>
   <component name="RunManager">
@@ -176,7 +181,7 @@
       <option name="presentableId" value="Default" />
       <updated>1597204601881</updated>
       <workItem from="1597204602959" duration="487000" />
-      <workItem from="1597205091273" duration="27559000" />
+      <workItem from="1597205091273" duration="31447000" />
     </task>
     <task id="LOCAL-00001" summary="Описание">
       <created>1597205106343</created>
@@ -290,7 +295,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597239703017</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Добавлен посредник">
+      <created>1597240231520</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1597240231520</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -312,7 +324,8 @@
     <MESSAGE value="Написаны тесты на создание, обновление, получение, удаление" />
     <MESSAGE value="Добавлен экшен и модель" />
     <MESSAGE value="Добавлена миграция" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлена миграция" />
+    <MESSAGE value="Добавлен посредник" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлен посредник" />
   </component>
   <component name="WindowStateProjectService">
     <state x="726" y="142" width="450" height="760" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1597209408244">
@@ -323,10 +336,10 @@
       <screen x="0" y="0" width="1920" height="1054" />
     </state>
     <state x="690" y="283" width="528" height="481" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1054@0.0.1920.1054" timestamp="1597239947058" />
-    <state x="512" y="86" width="883" height="876" key="CommitChangelistDialog2" timestamp="1597239702948">
+    <state x="512" y="86" width="883" height="876" key="CommitChangelistDialog2" timestamp="1597240231456">
       <screen x="0" y="0" width="1920" height="1054" />
     </state>
-    <state x="512" y="86" width="883" height="876" key="CommitChangelistDialog2/0.0.1920.1054@0.0.1920.1054" timestamp="1597239702948" />
+    <state x="512" y="86" width="883" height="876" key="CommitChangelistDialog2/0.0.1920.1054@0.0.1920.1054" timestamp="1597240231456" />
     <state x="740" y="283" width="428" height="481" key="FileChooserDialogImpl" timestamp="1597220803018">
       <screen x="0" y="0" width="1920" height="1054" />
     </state>
@@ -339,24 +352,13 @@
       <screen x="0" y="0" width="1920" height="1054" />
     </state>
     <state x="446" y="160" key="SettingsEditor/0.0.1920.1054@0.0.1920.1054" timestamp="1597221213623" />
-    <state x="552" y="261" width="804" height="525" key="Vcs.Push.Dialog.v2" timestamp="1597239709054">
+    <state x="552" y="261" width="804" height="525" key="Vcs.Push.Dialog.v2" timestamp="1597240235982">
       <screen x="0" y="0" width="1920" height="1054" />
     </state>
-    <state x="552" y="261" width="804" height="525" key="Vcs.Push.Dialog.v2/0.0.1920.1054@0.0.1920.1054" timestamp="1597239709054" />
+    <state x="552" y="261" width="804" height="525" key="Vcs.Push.Dialog.v2/0.0.1920.1054@0.0.1920.1054" timestamp="1597240235982" />
     <state x="649" y="269" width="694" height="708" key="find.popup" timestamp="1597236053615">
       <screen x="0" y="0" width="1920" height="1054" />
     </state>
     <state x="649" y="269" width="694" height="708" key="find.popup/0.0.1920.1054@0.0.1920.1054" timestamp="1597236053615" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/User.php</url>
-          <line>9</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

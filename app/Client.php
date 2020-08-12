@@ -30,9 +30,9 @@ class Client extends Model
      */
     protected $casts = [
         'user_id' => 'string',
-        'surname' => 'integer',
-        'phone' => 'integer',
-        'email' => 'integer',
+        'surname' => 'string',
+        'phone' => 'string',
+        'email' => 'string',
     ];
 
     /**

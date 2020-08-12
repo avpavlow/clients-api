@@ -21,8 +21,8 @@ $factory->define(Client::class, function (Faker $faker) {
     static $password;
 
     return [
-        'name' => $faker->name,
-        'surname' => $faker->name,
+        'name' => ucfirst($faker->word),
+        'surname' => ucfirst($faker->word),
         'email' => $faker->unique()->safeEmail,
         'phone' => $faker->e164PhoneNumber,
     ];

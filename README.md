@@ -28,7 +28,9 @@
     PASSWORD_CLIENT_ID=2
     PASSWORD_CLIENT_SECRET=N05c9s7Xy2WZtBZ7jxqjmHeeTlJ2OuEFJ8wZPQNx
     ````
-    Это нужно для OAuth-авторизации с помощью токенов
+    Это нужно для OAuth-авторизации с помощью токенов.
+    Passport-авторизация использована поскольку с появлением AirLock она не устарела и все еще 
+    является основной авторизацией проверенная временем.
 4. Выполните `php artisan config:cache`
 5. Выполните `php artisan migrate`
 6. Выполните `php artisan db:seed`

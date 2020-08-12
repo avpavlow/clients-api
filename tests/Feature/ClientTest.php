@@ -26,6 +26,7 @@ class ClientTest extends TestCase
             'password' => 'secret',
         ]);
 
+        \Log::info(json_encode($response));
         //Получили токен
         // $this->token  = json_encode($response->baseResponse->original['access_token']);
         $this->token = $response->getData()->access_token;
@@ -54,7 +55,7 @@ class ClientTest extends TestCase
     {
         $headers = ['Authorization' => "Bearer $this->token"];
         $new = factory(Client::class)->make()->toArray();
-
+\Log::info($new);
         $created = $this->json('POST', 'api/clients', $new, $headers)
             ->assertStatus(201)->getData();
 
