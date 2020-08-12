@@ -10,6 +10,11 @@ use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
+/**
+ * Очередь по созданию действий пользователей в фоне
+ * Class CreateUserActionJob
+ * @package App\Jobs
+ */
 class CreateUserActionJob implements ShouldQueue
 {
     use InteractsWithQueue, Queueable, SerializesModels;
@@ -23,7 +28,6 @@ class CreateUserActionJob implements ShouldQueue
 
     public function handle()
     {
-        $action = UserAction::create($this->data);
-        \Log::info($action);
+        UserAction::create($this->data);
     }
 }
