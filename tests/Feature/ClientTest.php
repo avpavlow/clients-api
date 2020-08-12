@@ -47,66 +47,33 @@ class ClientTest extends TestCase
     }
 
 
-    //Тестируем на создание и удаление при этом
-    public function test_create_client()
+    /**
+     * Тестируем на создание и удаление при этом
+     */
+    public function test_create_delete_client()
     {
         $headers = ['Authorization' => "Bearer $this->token"];
         $new = factory(Client::class)->make()->toArray();
-        \Log::info($new);
 
         $created = $this->json('POST', 'api/clients', $new, $headers)
             ->assertStatus(201)->getData();
-
-        \Log::info(json_encode($created));
 
         $this->json('DELETE', 'api/clients/' . $created->id, [], $headers)
             ->assertStatus(200);
     }
 
 
-    /*
-        public function testsContributionAreUpdatedCorrectly()
+    /**
+     * Тестируем обновление
+     */
+        public function test_update_client()
         {
             $headers = ['Authorization' => "Bearer $this->token"];
+            $new = factory(Client::class)->create();
 
-            $Contribution = factory(PeopleContribution::class)->create([
-                'title' => 'First Contribution',
-                'description' => 'Ipsum',
-                'people_id' => rand(1, 200)
-            ]);
 
-            $payload = [
-                'title' => 'Lorem',
-                'description' => 'Ipsum',
-            ];
 
-            $response = $this->json('PUT', 'api/contribution/people_contributions/' . $Contribution->id, $payload, $headers)
-                ->assertStatus(200)
-                ->assertJsonStructure([
-                    'status',
-                    'id'
-                ])
-                ->assertJson([
-                    'status' => 0
-                ]);
+            $this->json('DELETE', 'api/clients/' . $new->id, [], $headers)
+                ->assertStatus(200);
         }
-
-        public function testsContributionAreDeletedCorrectly()
-        {
-            $headers = ['Authorization' => "Bearer $this->token"];
-            $Contribution = factory(PeopleContribution::class)->create([
-                'title' => 'First Contribution',
-                'description' => 'Ipsum',
-                'people_id' => rand(1, 200)
-            ]);
-
-            $this->json('DELETE', 'api/contribution/people_contributions/' . $Contribution->id, [], $headers)
-                ->assertStatus(200)
-                ->assertJson([
-                    'status' => 0
-                ]);
-        }
-    */
-
-
 }
