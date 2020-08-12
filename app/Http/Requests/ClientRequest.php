@@ -23,11 +23,14 @@ class ClientRequest extends FormRequest
      */
     public function rules()
     {
-        return [
-            'name'=> 'required|min:3',
-            'surname'=> 'required|min:3',
-            'phone'=> 'phone',
-            'email'=> 'email:rfc,dns',
+        $rules = [
+            'name' => 'required|min:3',
+            'surname' => 'required|min:3',
+            'phone' => 'phone',
+            'email' => 'email:rfc,dns',
         ];
+
+        return $rules;
+
     }
 }

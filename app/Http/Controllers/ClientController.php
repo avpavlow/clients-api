@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\Api;
 
 use App\Client;
+use App\Http\Requests\ClientRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\ArticleRequest;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Facades\Log;
 
@@ -20,66 +20,21 @@ class ClientController extends Controller
      */
     public function index(Request $request)
     {
-        if ($request->user()->is_admin) {
-            return Client::loadAll();
-        }
-        return Client::loadAllMine($request->user()->id);
+        return Client::loadAll();
     }
 
-    /**
-     * get all published articles
-     *
-     * @return mixeduse App\File;
-     */
-    public function publishedArticles()
-    {
-        return Client::loadAllPublished();
-    }
 
-    /**
-     * Get single published Client
-     *
-     * @param $slug
-     * @return mixed
-     */
-    public function publishedArticle($slug)
-    {
-        return Client::loadPublished($slug);
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
+     /**
      * Сохраняем новый созданный объект в БД
      *
-     * @param ArticleRequest $request
+     * @param ClientRequest $request
      * @return \Illuminate\Http\Response
      */
-    public function store(ArticleRequest $request)
+    public function store(ClientRequest $request)
     {
-        $user = $request->user();
+        $client = Client::create($request->validated());
 
-        $article = new Client($request->validated());
-        $article->slug = Str::slug($request->get('title'));
-
-        if ($request['image']){
-            $fileName = "fileName" . time() . '.' . $request['image']->getClientOriginalExtension();
-            $request['image']->move(public_path('/images/article_images'), $fileName);
-            $article['image'] = $fileName;
-        }
-
-        $user->articles()->save($article);
-
-
-        return response()->json($article, 201);
+        return response()->json($client, 201);
     }
 
     /**
@@ -91,54 +46,25 @@ class ClientController extends Controller
      */
     public function show(Request $request, $id)
     {
-        if (!$request->user()->is_admin) {
-            return Client::mine($request->user()->id)->findOrFail($id);
-        }
-
         return Client::findOrFail($id);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param int $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param ArticleRequest $request
+     * @param ClientRequest $request
      * @param int $id
      * @return \Illuminate\Http\Response
      */
-    public function update(ArticleRequest $request, $id)
+    public function update(ClientRequest $request, $id)
     {
-        Log::info($request);
-        $article = Client::findOrFail($id);
+        $client = Client::findOrFail($id);
 
         $data = $request->validated();
-        $data['slug'] = Str::slug($data['title']);
+        $client->update($data);
 
-        if ($request['image']){
-            $fileName = "fileName" . time() . '.' . $request['image']->getClientOriginalExtension();
-
-            $file = public_path('/images/article_images/' . $article->image);
-            if (file_exists($file)) {
-                unlink($file);
-            }
-
-            $request['image']->move(public_path('/images/article_images'), $fileName);
-            $data['image'] = $fileName;
-        }
-
-        $article->update($data);
-
-        return response()->json($article, 200);
+        return response()->json($client, 200);
     }
 
     /**
@@ -149,9 +75,9 @@ class ClientController extends Controller
      */
     public function delete($id)
     {
-        $article = Client::findOrFail($id);
+        $client = Client::findOrFail($id);
 
-        $article->delete();
+        $client->delete();
 
         return response([], 200);
     }
