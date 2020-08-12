@@ -27,7 +27,7 @@ abstract class TestCase extends BaseTestCase
     {
         parent::setUp();
 
-        //Токен получаем через общий сервис
+        //Токен получаем через IoC сервис
         $auth = $this->app->make(IAuthToken::class);
         $this->token =  $auth->getToken($this);
     }

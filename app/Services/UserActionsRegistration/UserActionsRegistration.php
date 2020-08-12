@@ -3,6 +3,8 @@
 namespace App\Services\UserActionsRegistration;
 
 
+use App\UserAction;
+
 /**
  * Сервис "Реализация регистрации действий пользователя"
  */
@@ -15,6 +17,6 @@ class UserActionsRegistration implements IUserActionsRegistration
      */
     public function register(array $data)
     {
-        // TODO: Implement register() method.
+        UserAction::create($data);
     }
 }
