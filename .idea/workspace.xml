@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6f9f3e4-d9ff-4fc4-a313-60487a4c2b66" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/database/seeds/ClientsSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Client.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Client.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/RegisterUserActions.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/RegisterUserActions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/ClientFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/ClientFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/ClientTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ClientTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +142,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/database/seeds" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../L-Shop" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
   </component>
@@ -181,7 +174,7 @@
       <option name="presentableId" value="Default" />
       <updated>1597204601881</updated>
       <workItem from="1597204602959" duration="487000" />
-      <workItem from="1597205091273" duration="31447000" />
+      <workItem from="1597205091273" duration="31809000" />
     </task>
     <task id="LOCAL-00001" summary="Описание">
       <created>1597205106343</created>
@@ -302,7 +295,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597240231520</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Добавлен посредник">
+      <created>1597251304564</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1597251304564</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -336,14 +336,14 @@
       <screen x="0" y="0" width="1920" height="1054" />
     </state>
     <state x="690" y="283" width="528" height="481" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1054@0.0.1920.1054" timestamp="1597239947058" />
-    <state x="512" y="86" width="883" height="876" key="CommitChangelistDialog2" timestamp="1597240231456">
+    <state x="512" y="86" width="883" height="876" key="CommitChangelistDialog2" timestamp="1597251304508">
       <screen x="0" y="0" width="1920" height="1054" />
     </state>
-    <state x="512" y="86" width="883" height="876" key="CommitChangelistDialog2/0.0.1920.1054@0.0.1920.1054" timestamp="1597240231456" />
-    <state x="740" y="283" width="428" height="481" key="FileChooserDialogImpl" timestamp="1597220803018">
+    <state x="512" y="86" width="883" height="876" key="CommitChangelistDialog2/0.0.1920.1054@0.0.1920.1054" timestamp="1597251304508" />
+    <state x="740" y="283" width="428" height="481" key="FileChooserDialogImpl" timestamp="1597251369823">
       <screen x="0" y="0" width="1920" height="1054" />
     </state>
-    <state x="740" y="283" width="428" height="481" key="FileChooserDialogImpl/0.0.1920.1054@0.0.1920.1054" timestamp="1597220803018" />
+    <state x="740" y="283" width="428" height="481" key="FileChooserDialogImpl/0.0.1920.1054@0.0.1920.1054" timestamp="1597251369823" />
     <state x="754" y="451" width="399" height="145" key="NewPhpFileDialog" timestamp="1597226750368">
       <screen x="0" y="0" width="1920" height="1054" />
     </state>
@@ -352,10 +352,10 @@
       <screen x="0" y="0" width="1920" height="1054" />
     </state>
     <state x="446" y="160" key="SettingsEditor/0.0.1920.1054@0.0.1920.1054" timestamp="1597221213623" />
-    <state x="552" y="261" width="804" height="525" key="Vcs.Push.Dialog.v2" timestamp="1597240235982">
+    <state x="552" y="261" width="804" height="525" key="Vcs.Push.Dialog.v2" timestamp="1597251309435">
       <screen x="0" y="0" width="1920" height="1054" />
     </state>
-    <state x="552" y="261" width="804" height="525" key="Vcs.Push.Dialog.v2/0.0.1920.1054@0.0.1920.1054" timestamp="1597240235982" />
+    <state x="552" y="261" width="804" height="525" key="Vcs.Push.Dialog.v2/0.0.1920.1054@0.0.1920.1054" timestamp="1597251309435" />
     <state x="649" y="269" width="694" height="708" key="find.popup" timestamp="1597236053615">
       <screen x="0" y="0" width="1920" height="1054" />
     </state>
