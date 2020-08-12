@@ -32,11 +32,8 @@ class ClientController extends Controller
     public function store(ClientRequest $request)
     {
         $validated = $request->validated();
-        \Log::info('validated');
-        \Log::info($validated);
         $client = Client::create($request->validated());
 
-        \Log::info($client);
         return response()->json($client, 201);
     }
 

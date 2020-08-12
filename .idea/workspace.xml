@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6f9f3e4-d9ff-4fc4-a313-60487a4c2b66" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/Auth/RegisterController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Jobs/CreateUserActionJob.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/ClientController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/ClientController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Middleware/RegisterUserActions.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/RegisterUserActions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/UserAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/UserAction.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/UserActionsRegistration/IUserActionsRegistration.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/UserActionsRegistration/IUserActionsRegistration.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/UserActionsRegistration/UserActionsRegistration.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/UserActionsRegistration/UserActionsRegistration.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_12_131829_add_user_actions.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_12_131829_add_user_actions.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -179,7 +180,7 @@
       <updated>1597204601881</updated>
       <workItem from="1597204602959" duration="487000" />
       <workItem from="1597205091273" duration="31809000" />
-      <workItem from="1597251477110" duration="6796000" />
+      <workItem from="1597251477110" duration="8885000" />
     </task>
     <task id="LOCAL-00001" summary="Описание">
       <created>1597205106343</created>
@@ -363,7 +364,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597258869314</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Авторизация">
+      <created>1597261340084</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1597261340084</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -394,29 +402,30 @@
     <MESSAGE value="По тестам поправлен код" />
     <MESSAGE value="Сервис добавлен в посредник" />
     <MESSAGE value="Описание приложения" />
-    <option name="LAST_COMMIT_MESSAGE" value="Описание приложения" />
+    <MESSAGE value="Авторизация" />
+    <option name="LAST_COMMIT_MESSAGE" value="Авторизация" />
   </component>
   <component name="WindowStateProjectService">
     <state x="726" y="142" width="450" height="760" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1597256680464">
       <screen x="0" y="0" width="1920" height="1054" />
     </state>
     <state x="726" y="142" width="450" height="760" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1054@0.0.1920.1054" timestamp="1597256680464" />
-    <state x="690" y="283" width="528" height="481" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1597258109522">
+    <state x="690" y="283" width="528" height="481" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1597261823023">
       <screen x="0" y="0" width="1920" height="1054" />
     </state>
-    <state x="690" y="283" width="528" height="481" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1054@0.0.1920.1054" timestamp="1597258109522" />
-    <state x="512" y="86" width="883" height="876" key="CommitChangelistDialog2" timestamp="1597258869231">
+    <state x="690" y="283" width="528" height="481" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1054@0.0.1920.1054" timestamp="1597261823023" />
+    <state x="512" y="86" width="883" height="876" key="CommitChangelistDialog2" timestamp="1597261339978">
       <screen x="0" y="0" width="1920" height="1054" />
     </state>
-    <state x="512" y="86" width="883" height="876" key="CommitChangelistDialog2/0.0.1920.1054@0.0.1920.1054" timestamp="1597258869231" />
+    <state x="512" y="86" width="883" height="876" key="CommitChangelistDialog2/0.0.1920.1054@0.0.1920.1054" timestamp="1597261339978" />
     <state x="740" y="283" width="428" height="481" key="FileChooserDialogImpl" timestamp="1597251369823">
       <screen x="0" y="0" width="1920" height="1054" />
     </state>
     <state x="740" y="283" width="428" height="481" key="FileChooserDialogImpl/0.0.1920.1054@0.0.1920.1054" timestamp="1597251369823" />
-    <state x="617" y="250" width="673" height="547" key="NewPhpClassDialog" timestamp="1597254873783">
+    <state x="617" y="250" width="673" height="547" key="NewPhpClassDialog" timestamp="1597262679343">
       <screen x="0" y="0" width="1920" height="1054" />
     </state>
-    <state x="617" y="250" width="673" height="547" key="NewPhpClassDialog/0.0.1920.1054@0.0.1920.1054" timestamp="1597254873783" />
+    <state x="617" y="250" width="673" height="547" key="NewPhpClassDialog/0.0.1920.1054@0.0.1920.1054" timestamp="1597262679343" />
     <state x="754" y="451" width="399" height="145" key="NewPhpFileDialog" timestamp="1597254511858">
       <screen x="0" y="0" width="1920" height="1054" />
     </state>
@@ -425,10 +434,10 @@
       <screen x="0" y="0" width="1920" height="1054" />
     </state>
     <state x="446" y="160" key="SettingsEditor/0.0.1920.1054@0.0.1920.1054" timestamp="1597221213623" />
-    <state x="552" y="261" width="804" height="525" key="Vcs.Push.Dialog.v2" timestamp="1597258874006">
+    <state x="552" y="261" width="804" height="525" key="Vcs.Push.Dialog.v2" timestamp="1597261345379">
       <screen x="0" y="0" width="1920" height="1054" />
     </state>
-    <state x="552" y="261" width="804" height="525" key="Vcs.Push.Dialog.v2/0.0.1920.1054@0.0.1920.1054" timestamp="1597258874006" />
+    <state x="552" y="261" width="804" height="525" key="Vcs.Push.Dialog.v2/0.0.1920.1054@0.0.1920.1054" timestamp="1597261345379" />
     <state x="649" y="269" width="694" height="708" key="find.popup" timestamp="1597236053615">
       <screen x="0" y="0" width="1920" height="1054" />
     </state>

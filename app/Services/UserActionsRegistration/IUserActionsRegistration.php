@@ -10,8 +10,7 @@ namespace App\Services\UserActionsRegistration;
 interface IUserActionsRegistration
 {
     /** Метод регистрации
-     * @param array $data Данные для регистрации
      * @return mixed
      */
-    public function register(array $data);
+    public function register();
 }

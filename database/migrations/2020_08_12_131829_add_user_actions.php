@@ -15,9 +15,9 @@ class AddUserActions extends Migration
     {
         Schema::create('user_actions', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('request_method', 5);
-            $table->string('url', 25);
-            $table->string('payload',15)->nullable();
+            $table->string('request_method', 10);
+            $table->string('url');
+            $table->text('payload')->nullable();
             $table->unsignedInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
 

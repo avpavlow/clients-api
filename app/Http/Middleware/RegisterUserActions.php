@@ -25,14 +25,7 @@ class RegisterUserActions
     {
         $response = $next($request);
 
-        $data = [
-            'url' => url()->full(),
-            'payload' => json_decode(request()->getContent()),
-            'method' => request()->method(),
-            'user_id' => Auth::user()->id
-        ];
-
-        $this->registration_action->register($data);
+        $this->registration_action->register();
 
         return $response;
     }
