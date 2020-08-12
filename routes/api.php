@@ -12,6 +12,7 @@ Route::group(['middleware' => 'auth:api'], function () {
     Route::get('/me', function (Request $request) {
         return $request->user();
     });
+
     Route::post('/', 'ClientController@store')->name('clients.store');
     Route::get('/', 'ClientController@index')->name('clients.index');
     Route::get('/{id}', 'ClientController@show')->name('clients.show');
