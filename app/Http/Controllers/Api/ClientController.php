@@ -5,8 +5,6 @@ namespace App\Http\Controllers\Api;
 use App\Client;
 use App\Http\Requests\ClientRequest;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Str;
 use App\Http\Controllers\Controller;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 
@@ -37,7 +35,6 @@ class ClientController extends Controller
         $query->paginate(20);
 
         $clients = $query->get();
-
 
         return $clients;
     }

@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6f9f3e4-d9ff-4fc4-a313-60487a4c2b66" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/ClientController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/ClientController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -176,7 +179,7 @@
       <workItem from="1597204602959" duration="487000" />
       <workItem from="1597205091273" duration="31809000" />
       <workItem from="1597251477110" duration="9102000" />
-      <workItem from="1597302287566" duration="6380000" />
+      <workItem from="1597302287566" duration="7693000" />
     </task>
     <task id="LOCAL-00001" summary="Описание">
       <created>1597205106343</created>
@@ -395,7 +398,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597308129937</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="тестирование поиска">
+      <created>1597308677818</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1597308677818</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -438,10 +448,10 @@
       <screen x="0" y="0" width="1920" height="1054" />
     </state>
     <state x="690" y="283" width="528" height="481" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1054@0.0.1920.1054" timestamp="1597303608633" />
-    <state x="512" y="86" width="883" height="876" key="CommitChangelistDialog2" timestamp="1597308129740">
+    <state x="512" y="86" width="883" height="876" key="CommitChangelistDialog2" timestamp="1597308677716">
       <screen x="0" y="0" width="1920" height="1054" />
     </state>
-    <state x="512" y="86" width="883" height="876" key="CommitChangelistDialog2/0.0.1920.1054@0.0.1920.1054" timestamp="1597308129740" />
+    <state x="512" y="86" width="883" height="876" key="CommitChangelistDialog2/0.0.1920.1054@0.0.1920.1054" timestamp="1597308677716" />
     <state x="740" y="283" width="428" height="481" key="FileChooserDialogImpl" timestamp="1597251369823">
       <screen x="0" y="0" width="1920" height="1054" />
     </state>
@@ -458,10 +468,10 @@
       <screen x="0" y="0" width="1920" height="1054" />
     </state>
     <state x="446" y="160" key="SettingsEditor/0.0.1920.1054@0.0.1920.1054" timestamp="1597221213623" />
-    <state x="552" y="261" width="804" height="525" key="Vcs.Push.Dialog.v2" timestamp="1597308134216">
+    <state x="552" y="261" width="804" height="525" key="Vcs.Push.Dialog.v2" timestamp="1597308682281">
       <screen x="0" y="0" width="1920" height="1054" />
     </state>
-    <state x="552" y="261" width="804" height="525" key="Vcs.Push.Dialog.v2/0.0.1920.1054@0.0.1920.1054" timestamp="1597308134216" />
+    <state x="552" y="261" width="804" height="525" key="Vcs.Push.Dialog.v2/0.0.1920.1054@0.0.1920.1054" timestamp="1597308682281" />
     <state x="649" y="269" width="694" height="708" key="find.popup" timestamp="1597236053615">
       <screen x="0" y="0" width="1920" height="1054" />
     </state>
