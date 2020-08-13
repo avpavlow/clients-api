@@ -22,26 +22,25 @@ class ClientController extends Controller
     {
         $query = Client::query();
 
-        switch ($request->search_type) {
-            case 'full_name':
-                $query->whereFullname($request->keyword);
-                break;
-            case 'phone':
-                $query->wherePhone($request->keyword);
-                break;
-            case 'email':
-                $query->whereEmail($request->keyword);
-                break;
-            case 'all':
-                $query->whereFullname($request->keyword);
-                $query->wherePhone($request->keyword);
-                $query->whereEmail($request->keyword);
-                break;
+        if($request->full_name){
+            $query->whereFullname($request->full_name);
         }
 
-        $query->paginate();
+        if($request->phone){
+            $query->wherePhone($request->phone);
+        }
 
-        return $query::get();
+        if($request->email){
+            $query->whereEmail($request->email);
+        }
+
+        $query->paginate(20);
+
+        DB::connection()->enableQueryLog();
+        $clients = $query->get();
+        \Log::info(DB::getQueryLog());
+
+        return $clients;
     }
 
 

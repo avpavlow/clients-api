@@ -16,17 +16,18 @@ class ClientTest extends TestCase
 
 
     /**
-     * Тестируем получение
+     * Тестируем получение постраничего
      *
      * @return void
      */
-    public function test_get_clients()
+   public function test_get_clients_with_page()
     {
         $headers = ['Authorization' => "Bearer $this->token"];
 
-        $response = $this->json('GET', 'api/clients', [], $headers);
+        $response = $this->json('GET', 'api/clients?page=20', [], $headers);
         //Получили токен
         $response->assertStatus(200);
+        $response->assertJsonCount(20);
     }
 
 
@@ -38,7 +39,6 @@ class ClientTest extends TestCase
         $headers = ['Authorization' => "Bearer $this->token"];
         $new = factory(Client::class)->make()->toArray();
 
-        \Log::info($new);
 
         $created = $this->json('POST', 'api/clients', $new, $headers)
             ->assertStatus(201)->getData();

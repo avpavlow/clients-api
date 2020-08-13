@@ -11,6 +11,6 @@ class ClientsSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Client::class, 200)->create();
+        factory(App\Client::class, 500)->create();
     }
 }
