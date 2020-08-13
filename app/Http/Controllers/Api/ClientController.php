@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Client;
 use App\Http\Requests\ClientRequest;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 use App\Http\Controllers\Controller;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
@@ -12,18 +13,39 @@ use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 class ClientController extends Controller
 {
     /**
-     * Показать список
+     * Показать список с поиском
      *
      * @param Request $request
      * @return LengthAwarePaginator|mixed
      */
     public function index(Request $request)
     {
-        return Client::loadAll();
+        $query = Client::query();
+
+        switch ($request->search_type) {
+            case 'full_name':
+                $query->whereFullname($request->keyword);
+                break;
+            case 'phone':
+                $query->wherePhone($request->keyword);
+                break;
+            case 'email':
+                $query->whereEmail($request->keyword);
+                break;
+            case 'all':
+                $query->whereFullname($request->keyword);
+                $query->wherePhone($request->keyword);
+                $query->whereEmail($request->keyword);
+                break;
+        }
+
+        $query->paginate();
+
+        return $query::get();
     }
 
 
-     /**
+    /**
      * Сохраняем новый созданный объект в БД
      *
      * @param ClientRequest $request
