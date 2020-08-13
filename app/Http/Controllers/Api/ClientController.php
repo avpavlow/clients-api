@@ -36,9 +36,8 @@ class ClientController extends Controller
 
         $query->paginate(20);
 
-        DB::connection()->enableQueryLog();
         $clients = $query->get();
-        \Log::info(DB::getQueryLog());
+
 
         return $clients;
     }
