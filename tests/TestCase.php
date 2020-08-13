@@ -21,7 +21,7 @@ abstract class TestCase extends BaseTestCase
     use CreatesApplication;
 
     //В тестах используем транзакции
-    use DatabaseTransactions;
+   // use DatabaseTransactions;
 
     public function setUp(): void
     {

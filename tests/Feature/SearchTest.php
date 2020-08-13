@@ -43,7 +43,6 @@ class SearchTest extends TestCase
         //Получили токен
         $response->assertStatus(200);
         $response->assertJson([]);
-        \Log::info($response->getData());
     }
 
 

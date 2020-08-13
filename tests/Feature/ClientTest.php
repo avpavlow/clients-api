@@ -11,10 +11,6 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class ClientTest extends TestCase
 {
-    private $email = 'user@mail.ru';
-    private $password = 'secret';
-
-
     /**
      * Тестируем получение постраничего
      *

@@ -33,7 +33,7 @@ class LoginTest extends TestCase
 
 
     /**
-     * A basic test example.
+     * Для проверки регистрации
      *
      * @return void
      */
